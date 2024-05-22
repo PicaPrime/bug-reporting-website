@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugWhisperer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+        background-image: url('https://images.ctfassets.net/0qbbph04pomv/1WY2mJnqGavO6US8tNNnvq/fa6a145b6bdcb491151e21aa9716dc45/Blog-Post.jpg?w=1170&h=365&q=70&fit=thumb');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 150px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .hero .container {
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        animation: heroAnimation 2s ease-in-out;
+    }
+    .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    .hero p {
+        font-size: 1.5rem;
+    }
+    @keyframes heroAnimation {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .feature {
+        padding: 50px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .feature:hover {
+        transform: translateY(-10px);
+    }
+    .feature i {
+        transition: transform 0.3s ease-in-out;
+    }
+    .feature:hover i {
+        transform: scale(1.2);
+    }
+    .feature h3 {
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    .feature p {
+        color: #6c757d;
+    }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .feature {
+        animation: fadeInUp 1s ease-in-out;
+    }
+    .feature:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    .feature:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+    .feature:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">BugWhisperer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login/Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#bugReportModal">Report Bug</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero text-center">
+        <div class="container">
+            <h1>Welcome to BugWhisperer</h1>
+            <p class="lead">The ultimate bug tracking solution for your software projects.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 feature">
+                <i class="bi bi-bug-fill display-1 text-primary"></i>
+                <h3>Bug Tracking</h3>
+                <p>Effortlessly track and manage bugs in your software projects.</p>
+            </div>
+            <div class="col-md-4 feature">
+                <i class="bi bi-graph-up-arrow display-1 text-success"></i>
+                <h3>Project Management</h3>
+                <p>Keep your projects organized and on track with our powerful project management tools.</p>
+            </div>
+            <div class="col-md-4 feature">
+                <i class="bi bi-people-fill display-1 text-warning"></i>
+                <h3>Collaboration</h3>
+                <p>Foster seamless collaboration among your team members with our intuitive platform.</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
